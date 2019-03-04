@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import Empty from './components/Empty.vue'
+import KupiTable from './components/KupiTable/KupiTable.vue'
 
 Vue.use(Router)
 
@@ -11,8 +11,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Empty',
-      component: Empty,
+      name: 'KupiTable',
+      component: KupiTable,
     },
   ]
 })
