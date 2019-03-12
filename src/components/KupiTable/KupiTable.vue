@@ -1,14 +1,29 @@
 <template>
-  <div>
-    <h1>Kupi table</h1>
+  <div class="kupi-table">
+    <table>
+      <thead>
+        <tr>
+          <th v-for="(th, thIndex) in data[0]" :key="thIndex">{{thIndex}}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="(tr, trIndex) in data" :key="trIndex">
+          <td v-for="(td, tdIndex) in tr" :key="tdIndex">
+            {{td}}
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </template>
 
 <script>
 export default {
-  data: () => ({
+  data() {
+    return {
+      data: require('./data.js').default
     }
-  ),
+  },
   created() {
   },
   methods: {
